@@ -1,0 +1,6 @@
+# ErrorDocument 403 /~tcmc01/403.php
+ErrorDocument 404 /~tcmc01/404.php
+
+RewriteEngine On
+RewriteBase /~tcmc01/m2/
+RewriteRule ^artist/([\d+]*)$ /~tcmc01/m2/artistView.php?id=$1 [L]

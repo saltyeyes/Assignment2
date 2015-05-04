@@ -1,12 +1,12 @@
 <?php
 
 	// set page title variable here
-	$pageTitle = "Home";
+	$page_title = "Home";
 
-	include('templates/header.php');
+	include('include/header.php');
 
 	// codey stuff here
 
-	include('templates/footer.php');
+	include('include/footer.php');
 
 ?>

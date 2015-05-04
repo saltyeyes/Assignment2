@@ -1,0 +1,19 @@
+#artistForm tr td:nth-child(1) {
+    text-align: right;
+}
+#artistForm tr:nth-child(5) td {
+    text-align: center;
+}
+
+.featured {
+    background-color: #ccc;
+}
+
+textarea#info {
+	width: 300px;
+	height: 100px;
+}
+
+img.artist {
+	max-width: 128px;
+}
