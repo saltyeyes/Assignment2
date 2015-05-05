@@ -3,7 +3,7 @@
 const IMAGE_ADMIN_PREFIX = "../";
 
 function getImageElement($filename) {
-    return "<img class='artist' src='/~tcmc01/m2/img/" . (file_exists("img/" . $filename) ? $filename : "placeholder.png") . "' />";
+    return "<img class='artist' src='/~tcmc01/m2/img/" . (file_exists("/home/tcmc01/public_html/m2/img/" . $filename) ? $filename : "placeholder.png") . "' />";
 }
 
 function uploadImage($image, $name) {
@@ -40,7 +40,7 @@ function uploadImage($image, $name) {
     }
 
     $newName = sprintf('%s.%s', $name, $ext);
-    if ( !move_uploaded_file( $image['tmp_name'], "img/" . $newName ) ) {
+    if ( !move_uploaded_file( $image['tmp_name'], "/home/tcmc01/public_html/m2/img/" . $newName ) ) {
         throw new RuntimeException('Failed to move uploaded file.');
     }
     return $newName;
@@ -51,7 +51,7 @@ function redirect($url) {
 }
 
 function getLink($url) {
-    return "/~tcmc01/m2/" . $url;
+    return str_replace("//","/","/~tcmc01/m2/" . $url);
 }
 
 ?>

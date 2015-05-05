@@ -1,4 +1,7 @@
 <!doctype html>
+<?php
+include_once("utils.php");
+?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -9,8 +12,8 @@
     <body>
     	<div class="menu">
     		<ul>
-    			<li><a href="artistForm.php">New Artist</a></li>
-    			<li><a href="artistList.php">List Artists</a></li>
+    			<li><a href="<?php echo getLink("artists/new/") ?>">New Artist</a></li>
+    			<li><a href="<?php echo getLink("artists/") ?>">List Artists</a></li>
     		</ul>
     	</div>
         <div class="container">

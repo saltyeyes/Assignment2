@@ -1,6 +1,6 @@
 <?php
-include("include/utils.php");
-include("include/connect.php");
+include("../include/utils.php");
+include("../include/connect.php");
 
 //check if id exists
 
@@ -11,7 +11,7 @@ if ($isUpdating) {
     $sql->execute();
     $row = $sql->fetch();
     if ($row == null) {
-        redirect("404.php");
+        redirect("/404");
     }
 }
 
@@ -69,7 +69,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
     if ($error == null) {
         $dbh->commit();
         // print_r($dbh->errorInfo()); die();
-        redirect("artistList.php#a".$id);
+        redirect("/artists/#a".$id);
     } else {
         $dbh->rollback();
     }
@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' and $isUpdating) {
     $feature = $row['is_featured'];
 }
 
-include("include/header.php");
+include("../include/header.php");
 ?>
 <h2><?php echo $isUpdating ? "Update" : "New" ?> Artist's details:</h2>
 <?php
@@ -95,7 +95,7 @@ include("include/header.php");
         echo "<div class='messages'><div class='message error'>".$error."</div></div>";
     }
 ?>
-<form id="insert" name="insert" method="post" action="<?php getFullLink('artistForm.php') ?>" enctype="multipart/form-data">
+<form id="insert" name="insert" method="post" action="<?php echo getLink('/artists/'. ($isUpdating ? $_REQUEST['id'] . '/edit' : 'new') . '/') ?>" enctype="multipart/form-data">
     <input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
     <table>
         <tr>    
@@ -122,5 +122,5 @@ include("include/header.php");
 </form>
 
 <?php
-    include("include/footer.php");
+    include("../include/footer.php");
 ?>

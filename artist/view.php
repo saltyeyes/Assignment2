@@ -1,9 +1,9 @@
 <?php
-include("include/utils.php");
-include("include/connect.php");
+include("../include/utils.php");
+include("../include/connect.php");
 
 if (!isset($_REQUEST['id'])) {
-    redirect("404.php");
+    redirect("/404");
 }
 $sql = $dbh->prepare("SELECT * from artists where id=:id");
 $sql->bindValue(":id", $_REQUEST["id"]);
@@ -11,7 +11,7 @@ $sql->execute();
 $row = $sql->fetch();
 
 if($row == null) {
-    redirect("404.php");
+    redirect("/404");
 }
 
 $name = $row['name'];
@@ -24,10 +24,10 @@ $page_title = "Artist - " . $name;
 ////////////////////////////////////////////////
 
 
-include("include/header.php");
+include("../include/header.php");
 ?>
 <h2><?php echo $name; ?></h2>
-<form class="artistDisplay" name="artist" method="post" action="artistList.php">
+<form class="artistDisplay" name="artist" method="post" action="<?php echo getLink('/artists/'); ?>">
 <?php echo "<input type='hidden' name='id' value='$row[id]' />"; ?>
     <table>
         <tr>
@@ -44,5 +44,5 @@ include("include/header.php");
 </form>
 
 <?php
-    include("include/footer.php");
+    include("../include/footer.php");
 ?>

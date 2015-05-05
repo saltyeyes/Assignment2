@@ -1,8 +1,20 @@
-# ErrorDocument 403 /~tcmc01/403.php
-ErrorDocument 404 /~tcmc01/404.php
+# ErrorDocument 403 /~tcmc01/m2/403.php
+ErrorDocument 404 /~tcmc01/m2/404.php
 
-IndexIgnore *
+# IndexIgnore *
 
 RewriteEngine On
 RewriteBase /~tcmc01/m2/
-RewriteRule ^artist/([\d+]*)$ /~tcmc01/m2/artistView.php?id=$1 [L]
+
+## Artists
+RewriteRule ^artists/?$                  /~tcmc01/m2/artist/list.php [L]             # list all artists
+RewriteRule ^artists/new/?$              /~tcmc01/m2/artist/form.php [L]             # create new artist
+RewriteRule ^artists/([\d+]*)/?$         /~tcmc01/m2/artist/view.php?id=$1 [L]       # view existing artist
+RewriteRule ^artists/([\d+]*)/edit/?$    /~tcmc01/m2/artist/form.php?id=$1 [L]       # edit existing artist
+
+## Misc
+RewriteRule ^404/?$ /~tcmc01/m2/404.php [L]                                         # fancy 404 file
+
+## Ensure slashes at the end of all URLs that don't directly access a file
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^(.*)([^/])$        /$1$2/ [L,R=301]
