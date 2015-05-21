@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    background-color: #FAAC58;
+}
+
+h1 {
+    color: orange;
+    text-align: center;
+}
+
+p {
+    font-family: "Times New Roman";
+    font-size: 20px;
+}
+table tr td{
+	border: 1px solid black;
+	padding: 0px;	
+}
+table{border: 0px solid black;
+	padding: 0px;	}
+/*placeholder colours*/
+#siteTable{
+	width: 100%;
+	height: 1600px;
+	position: absolute; 
+	top: 0; 
+	bottom: 0; 
+	left: 0; 
+	right: 0;
+}
+#nearEvents {
+ background-color: #F5A9A9;
+    width: 120px;
+    height: 200px;
+    border-style: ridge;
+    border-width: 5px;
+    border-color: coral
+    
+   
+}
+#logo {
+    padding-left: 12px;
+}
+#leftBar a {
+    padding: 0px;
+}
+#middleRow{
+	width: 100%;
+	height: 852;
+}
+#middleRowTable{
+	width: 100%;
+	height: 100%;
+}
+#middleTable{
+	width: 100%;
+	height: 100%;
+}
+#logoHeader {
+	background-color: #8A0808;
+	height: 128px;
+}
+#leftBar {
+	background-color: #ca0101;
+	width: 10%;
+	min-width: 150px;
+	max-width: 150px;
+	
+}
+#main {
+	background-color: ;
+	height: 100%;
+	width: 80%;
+	min-width: 700px;
+}
+#rightBar {
+	background-color: #ca0101;
+	width: 10%;
+	min-width: 150px;
+	max-width: 150px;
+}
+#address {
+	background-color: #8A0808;
+	height: 20px;
+}
+#pageTitle {
+	background-color: #FA5858;
+	height: 50px
+;}
+#main1 {
+	background-color: #F5A9A9;
+}
+#main2 {
+	background-color: #F5A9A9;
+}
