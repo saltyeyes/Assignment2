@@ -1,6 +1,6 @@
 <?php
 
-const DEBUG_MODE = TRUE;
+const DEBUG_MODE = FALSE;
 
 define("IMG_WEBDIR", DEBUG_MODE ? '/img/' : '/~tcmc01/m2/img/');
 define("IMG_DIR", DEBUG_MODE ? dirname(dirname(__FILE__))."/img/" : "/home/tcmc01/public_html/m2/img/");
