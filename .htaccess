@@ -1,19 +1,27 @@
-# ErrorDocument 403 /~tcmc01/m2/403.php
-ErrorDocument 404 /~tcmc01/m2/404.php
+# ErrorDocument 403 /~tcmc01/site/403.php
+ErrorDocument 404 /~tcmc01/site/404.php
 
 # IndexIgnore *
 
 RewriteEngine On
-RewriteBase /~tcmc01/m2/
+RewriteBase /~tcmc01/site/
 
 ## Artists
-RewriteRule ^artists/?$                  /~tcmc01/m2/artist/list.php [L]             # list all artists
-RewriteRule ^artists/new/?$              /~tcmc01/m2/artist/form.php [L]             # create new artist
-RewriteRule ^artists/([\d+]*)/?$         /~tcmc01/m2/artist/view.php?id=$1 [L]       # view existing artist
-RewriteRule ^artists/([\d+]*)/edit/?$    /~tcmc01/m2/artist/form.php?id=$1 [L]       # edit existing artist
+RewriteRule ^artists/?$                  /~tcmc01/site/artist/list.php [L]              # list all artists
+RewriteRule ^artists/new/?$              /~tcmc01/site/artist/form.php [L]              # create new artist
+RewriteRule ^artists/([\d+]*)/?$         /~tcmc01/site/artist/view.php?id=$1 [L]        # view existing artist
+RewriteRule ^artists/([\d+]*)/edit/?$    /~tcmc01/site/artist/form.php?id=$1 [L]        # edit existing artist
+
+## Events
+RewriteRule ^events/?$                   /~tcmc01/site/event/list.php                   # list all current events
+RewriteRule ^events/past/?$              /~tcmc01/site/event/list.php                   # list all past events
+
+## Members
+RewriteRule ^members/?$                  /~tcmc01/site/members/area.php [L]             # list all artists
+RewriteRule ^members/register/?$         /~tcmc01/site/members/form.php [L]             # create new artist
 
 ## Misc
-RewriteRule ^404/?$ /~tcmc01/m2/404.php [L]                                         # fancy 404 file
+RewriteRule ^404/?$ /~tcmc01/site/404.php [L]                                           # fancy 404 file
 
 ## Ensure slashes at the end of all URLs that don't directly access a file
 #RewriteCond %{REQUEST_FILENAME} !-f

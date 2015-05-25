@@ -2,6 +2,10 @@
 include("../include/utils.php");
 include("../include/connect.php");
 
+$required_permissions = AccessLevels::PaidMember;
+
+// include("../include/session.php");
+
 //check if id exists
 
 $isUpdating = isset($_REQUEST["id"]);

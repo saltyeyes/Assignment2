@@ -1,10 +1,7 @@
 <?php
-ini_set('display_errors',1);
-ini_set('display_startup_errors',1);
-error_reporting(-1);
-
+include_once("utils.php");
 try {
-	$dbh = new PDO('sqlite:/home/tcmc01/public_html/m1/db/tcmc.sqlite'); 
+	$dbh = new PDO(DEBUG_MODE ? 'sqlite:..\db\tcmc.sqlite' : 'sqlite:/home/tcmc01/public_html/m2/db/tcmc.sqlite'); 
 } catch(PDOException $e) {
 	echo $e->getMessage();
 }
