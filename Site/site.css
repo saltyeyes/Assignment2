@@ -1,50 +1,45 @@
 @charset "utf-8";
 /* CSS Document */
 body {
-    background-color: #FAAC58;
+	background-color: #F5A9A9;
 }
-
 h1 {
-    color: orange;
-    text-align: center;
+	color: orange;
+	text-align: center;
 }
-
 p {
-    font-family: "Times New Roman";
-    font-size: 20px;
+	font-family: "Times New Roman";
+	font-size: 20px;
 }
-#siteDiv{
+#siteDiv {
 	width: 100%;
 	height: 1600px;
-	position: absolute; 
-	top: 0; 
-	bottom: 0; 
-	left: 0; 
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
 	right: 0;
 }
 #nearEvents, #featuredArtist {
- 	background-color: #F5A9A9;
-    width: 120px;
-    height: 200px;
-    border-style: ridge;
-    border-width: 5px;
-    border-color: coral;
+	background-color: #F5A9A9;
+	width: 120px;
+	height: 200px;
+	border-style: ridge;
+	border-width: 5px;
+	border-color: coral;
 }
 #logo {
-    padding: 12px;
-
+	padding: 12px;
 }
-
 #leftBar a {
-    padding: 0px;
+	padding: 0px;
 }
-#middleRow{
+#middleRow {
 	width: 100%;
 	height: 1552px;
 	display: flex;
 }
-
-#middleTable{
+#middleTable {
 	width: 100%;
 	height: 100%;
 }
@@ -52,49 +47,51 @@ p {
 	background-color: #8A0808;
 	/*background-image: url(TCMCbanner.jpg);*/
 	height: 128px;
-
+	font: 400 80px/1.3 'Arizonia', Helvetica, sans-serif;
+  	color: #ffffff;
+	padding-left: 15px;
+	white-space: nowrap;
 }
-#leftBar {
 
+#leftBar {
 	background-color: #ca0101;
 	width: 10%;
 	min-width: 150px;
 	max-width: 150px;
 	border-style: ridge;
-    border-width: 5px;
-    border-color: coral;
-	    border-style: ridge;
-    border-width: 5px;
-    border-color: coral;
-	
+	border-width: 5px;
+	border-color: coral;
+	border-style: ridge;
+	border-width: 5px;
+	border-color: coral;
 }
 #main {
-
-
 	height: 100%;
 	width: 100%;
 	min-width: 700px;
 }
 #rightBar {
-
 	background-color: #ca0101;
 	width: 10%;
 	min-width: 150px;
 	max-width: 150px;
-	    border-style: ridge;
-    border-width: 5px;
-    border-color: coral;
+	border-style: ridge;
+	border-width: 5px;
+	border-color: coral;
 }
 #address {
 	background-color: #8A0808;
 	height: 20px;
 }
 #pageTitle {
+	padding-left: 15px;
 	background-color: #FA5858;
 	height: 50px;
 	border-style: ridge;
-    border-width: 5px;
-    border-color: coral;
+	border-width: 5px;
+	border-color: coral;
+	font: 400 40px/1.3 'Arizonia', Helvetica, sans-serif;
+  	color: #ffffff;
 }
 #main1 {
 	background-color: #F5A9A9;
@@ -104,22 +101,69 @@ p {
 	background-color: #F5A9A9;
 	height: 751px;
 }
-#sponsors{
+#sponsors {
 	padding-top: 5px;
 	width: 120px;
 }
-
+/*member page*/
+#tabbed {
+	position: absolute;
+	left: 405px;
+}
+#comment {
+	Height: 150px;
+	width: 280px;
+}
+#paypal {
+	margin-top: 5px;
+}
+#signUp{
+		padding: 20px;
+	width: 400px;
+	margin-top: 30px;
+	margin-left: 30px;
+	border-style: ridge;
+	border-width: 5px;
+	border-color: coral;
+	background-color: #ebb282;	
+}
 /* Info page*/
-#contactAndImage{
+#contactAndImage {
 	display: flex;
 	height: 170px;
 }
-#contactAndImage img{
+#contactAndImage img {
 	width: 300px;
 	height: 170px;
 	min-width: 300px;
+
 }
-#contactDeets{
+#contactDeets {
 	margin-left: 10px;
-	height:170px;
+	height: 170px;
+}
+#mainInfo {
+	background-color: #F5A9A9;
+	height: 1492px;
+}
+#firstBlock{
+	padding: 20px;
+	margin-left: 48px;
+	margin-right: 48px;
+	border-style: ridge;
+	border-width: 5px;
+	border-color: coral;
+	background-color: #ebb282;	
+}
+#jeanDartnall{
+	font-size:10pt;
+
+}
+#innerDartnell{
+	border-style: ridge;
+	border-width: 5px;
+	border-color: coral;
+	background-color: #ebb282;
+	text-align:center;
+	width:90%;
 }
