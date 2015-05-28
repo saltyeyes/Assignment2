@@ -3,10 +3,16 @@
 	// set page title variable here
 	$page_title = "Home";
 
-	include('include/header.php');
+	include_once('include/header.php');
 
-	// codey stuff here
+?>
 
-	include('include/footer.php');
+
+
+
+
+<?php
+
+	include_once('include/footer.php');
 
 ?>
